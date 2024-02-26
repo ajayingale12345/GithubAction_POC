@@ -11,7 +11,10 @@ jobs:
     runs-on: ubuntu-latest
    
     steps:
-     
+      - name: Adding Script to my workflow
+        run: |
+          pwd
+          ls -l
       - name: Adding Script to my workflow
         run: |
           bash /home/runner/work/GithubAction_POC/GithubAction_POC/test.sh
