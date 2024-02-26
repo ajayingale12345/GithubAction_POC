@@ -1,1 +1,2 @@
-Enter file contents here
+
+echo "Hello Ajay"
