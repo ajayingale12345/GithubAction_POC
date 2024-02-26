@@ -43,6 +43,7 @@ jobs:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         run: |
           # Download SonarQube Scanner
+          cd spring-boot-ems
           curl -sSL https://binaries.sonarsource.com/Distribution/sonar-scanner-cli/sonar-scanner-cli-4.6.2.2472-linux.zip -o sonar-scanner-cli.zip
           unzip -qq sonar-scanner-cli.zip
              ls
