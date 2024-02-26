@@ -20,9 +20,7 @@ jobs:
         run: |
           pwd
           ls -l
-      - name: Run Custom Script
-        run: |
-          bash /home/runner/work/GithubAction_POC/GithubAction_POC/scripts/myscript.sh
+     
       
       - name: Use Secret
         run: |
