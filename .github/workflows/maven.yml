@@ -12,14 +12,16 @@ jobs:
     runs-on: ubuntu-latest
    
     steps:
+     - name: Adding Script to my workflow
+          run: 
+      bash /home/runner/work/GithubAction_POC/myscript.sh
     - name: Use Secret
       run: |
        echo "My secret key is ${{ secrets.MY_SECRET_KEY }} "
         echo "My Variable key is ${{ vars.MYVARIABLEKEY }} "
-        - name: Adding Script to my workflow
-        run: 
-          bash ./myscript.sh
+     
     - uses: actions/checkout@v3
+  
     - name: Set up JDK 17
       uses: actions/setup-java@v3
     
