@@ -11,6 +11,8 @@ jobs:
     runs-on: ubuntu-latest
    
     steps:
+      - name: dir check
+        run: pwd
       - name: Adding Script to my workflow
         run: bash  ./myscript.sh
       
