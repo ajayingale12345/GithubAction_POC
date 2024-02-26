@@ -12,7 +12,7 @@ jobs:
    
     steps:
       - name: Adding Script to my workflow
-        run: bash ./GithubAction_POC/myscript.sh
+        run: bash  ./myscript.sh
       
       - name: Use Secret
         run: |
