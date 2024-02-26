@@ -1,29 +1,21 @@
 
-name: Java CI with Maven
+
+name: Example Workflow
 
 on:
   push:
-    branches: [ "master" ]
-  pull_request:
-    branches: [ "master" ]
+    branches: [main]
+
+env:
+  MY_VARIABLE: "Hello, world!"
+  ANOTHER_VARIABLE: "123"
 
 jobs:
-  build:
-
+  example_job:
     runs-on: ubuntu-latest
-
     steps:
-    
-    - uses: actions/checkout@v3
-    - name: Use Secret
-      run: echo "My secret key is ${{ secrets.MY_SECRET_KEY }}"
-    - name: Set up JDK 17
-      uses: actions/setup-java@v3
-      with:
-        java-version: '17'
-        distribution: 'temurin'
-        cache: maven
-    - name: Build with Maven
-      run: mvn -B package --file  spring-boot-ems/pom.xml
+    - name: Use Variables
+      run: |
+        echo $MY_VARIABLE
+        echo $ANOTHER_VARIABLE
 
-  
