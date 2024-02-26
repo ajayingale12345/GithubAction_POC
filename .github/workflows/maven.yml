@@ -20,9 +20,9 @@ jobs:
         run: |
           pwd
           ls -l
-      - name: Adding Script to my workflow
+      - name: Run Custom Script
         run: |
-          bash /home/runner/work/GithubAction_POC/GithubAction_POC/scripts/myscript.sh
+          bash /home/runner/work/gitaction_poc1_2/gitaction_poc1_2/scripts/myscript.sh
       
       - name: Use Secret
         run: |
