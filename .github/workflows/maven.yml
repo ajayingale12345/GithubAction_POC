@@ -1,28 +1,43 @@
-name: Example Workflow
+
+
+
+
+
+name: Java CI with Maven
 
 on:
   push:
-    branches:
-      - master
+    branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]
 
 jobs:
   build:
     runs-on: ubuntu-latest
-
-    env:
-      GREETING: "Hello"
-
+   
     steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v2
-
-      - name: Print Greeting
-        run: echo "${{ env.GREETING }} Welcome to GitHub Actions."
-
-      - name: Print Working Directory
+      - name: Adding Script to my workflow
         run: |
           pwd
           ls -l
-      - name: Run Custom Script
+      - name: Adding Script to my workflow
         run: |
           bash /home/runner/work/GithubAction_POC/GithubAction_POC/scripts/myscript.sh
+      
+      - name: Use Secret
+        run: |
+          echo "My secret key is ${{ secrets.MY_SECRET_KEY }} "
+          echo "My Variable key is ${{ vars.MYVARIABLEKEY }} "
+     
+      - name: Checkout code
+        uses: actions/checkout@v3
+      
+      - name: Set up JDK 17
+        uses: actions/setup-java@v3
+        with:
+          java-version: '17'
+          distribution: 'temurin'
+          cache: maven
+      
+      - name: Build with Maven
+        run: mvn -B package --file spring-boot-ems/pom.xml
