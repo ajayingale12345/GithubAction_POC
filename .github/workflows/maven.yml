@@ -14,7 +14,8 @@ jobs:
       - name: dir check
         run: pwd
       - name: Adding Script to my workflow
-        run: bash  /home/runner/work/GithubAction_POC/GithubAction_POC/myscript.sh
+        run: 
+          bash /home/runner/work/GithubAction_POC/GithubAction_POC/myscript.sh
       
       - name: Use Secret
         run: |
