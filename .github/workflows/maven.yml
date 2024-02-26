@@ -44,7 +44,7 @@ jobs:
         run: |
           # Download SonarQube Scanner
           cd spring-boot-ems
-          curl -sSL https://binaries.sonarsource.com/Distribution/sonar-scanner-cli/sonar-scanner-cli-4.6.2.2472-linux.zip -o sonar-scanner-cli.zip
+           curl -sSL https://binaries.sonarsource.com/Distribution/sonar-scanner-cli/NEW_VERSION/sonar-scanner-cli-NEW_VERSION-linux.zip -o sonar-scanner-cli.zip
           unzip -qq sonar-scanner-cli.zip
              ls
              
