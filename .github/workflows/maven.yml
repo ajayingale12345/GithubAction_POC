@@ -11,11 +11,11 @@ jobs:
     runs-on: self-hosted
    
     steps:
-      - name: Adding Script to my workflow
-        run: |
-          pwd
-          ls -l
-          ls
+      # - name: Adding Script to my workflow
+      #   run: |
+      #     pwd
+      #     ls -l
+      #     ls
 
     
       
