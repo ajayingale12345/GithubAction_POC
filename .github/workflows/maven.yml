@@ -15,6 +15,7 @@ jobs:
         run: |
           pwd
           ls -l
+          ls
 
     
       
@@ -25,9 +26,9 @@ jobs:
      
       - name: Checkout code
         uses: actions/checkout@v3
-      - name: Execute myscript.sh
-        run: |
-          bash /home/runner/work/GithubAction_POC/GithubAction_POC/scripts/myscript.sh
+      # - name: Execute myscript.sh
+      #   run: |
+      #     bash /home/runner/work/GithubAction_POC/GithubAction_POC/scripts/myscript.sh
       - name: Set up JDK 17
         uses: actions/setup-java@v3
         with:
