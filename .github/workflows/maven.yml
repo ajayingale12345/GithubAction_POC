@@ -51,7 +51,7 @@ jobs:
           projectBaseDir: ./spring-boot-ems
           args: >
            -Dsonar.organization=ajayingale12345
-           -Dsonar.projectKey=26021_gitaction
+           -Dsonar.projectKey=ajayingale12345
            -Dsonar.sources=. 
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_GITHUB_ACTION }}
