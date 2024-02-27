@@ -49,6 +49,9 @@ jobs:
         uses: sonarsource/sonarqube-scan-action@v2
         with:
           projectBaseDir: ./spring-boot-ems
+          args: >
+           -Dsonar.projectKey=26021_sonarqube-gitaction_sonarqube-scan 
+           -Dsonar.sources=. 
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_GITHUB_ACTION }}
           SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
