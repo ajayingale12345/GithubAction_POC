@@ -95,11 +95,20 @@
           <goals>
             <goal>report</goal>
           </goals>
-          <configuration>
-            <formats>
-              <format>XML</format>
-            </formats>
-          </configuration>
+           <configuration>
+                            <!-- Sets the path to the file which contains the execution data. -->
+ 
+                            <dataFile>spring-boot-ems/target/jacoco.exec</dataFile>
+                            <!-- Sets the output directory for the code coverage report. -->
+                            <outputDirectory>spring-boot-ems/target/my-reports</outputDirectory>
+                        </configuration>
+                    </execution>
+                </executions>
+                <configuration>
+                    <systemPropertyVariables>
+                        <jacoco-agent.destfile>spring-boot-ems/target/jacoco.exec</jacoco-agent.destfile>
+                    </systemPropertyVariables>
+                </configuration>
         </execution>
       </executions>
     </plugin>
