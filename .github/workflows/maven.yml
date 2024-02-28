@@ -42,7 +42,7 @@ jobs:
       - name: Generate code coverage report
         run: |
           
-          mvn jacoco:report
+          mvn jacoco:report   -B package --file spring-boot-ems/pom.xml
       - name: Publish code coverage result
         uses: actions/upload-artifact@v2
         with:
