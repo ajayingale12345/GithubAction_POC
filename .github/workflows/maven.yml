@@ -23,7 +23,7 @@ jobs:
       - name: Use Secret
         run: |
           echo "My secret key is ${{ secrets.MY_SECRET_KEY }} "
-          echo "My Variable key is ${{ secrets.MYVARIABLEKEY }} "
+          echo "My Variable key is ${{ vars.MYVARIABLEKEY }} "
      
       - name: Checkout code
         uses: actions/checkout@v3
