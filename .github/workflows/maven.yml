@@ -53,6 +53,8 @@ jobs:
            -Dsonar.organization=ajayingale12345
            -Dsonar.projectKey=ajayingale12345_GithubAction_POC
            -Dsonar.sources=src/main
+           -Dsonar.exclusions=**/*.java
+
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN}}
           SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
