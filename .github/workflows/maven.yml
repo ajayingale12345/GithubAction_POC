@@ -39,6 +39,15 @@ jobs:
         run: mvn clean install -B package --file spring-boot-ems/pom.xml
       - name: runtest
         run: mvn test  -B package --file spring-boot-ems/pom.xml
+      - name: Generate code coverage report
+        run: |
+          
+          mvn jacoco:report
+      - name: Publish code coverage result
+        uses: actions/upload-artifact@v2
+        with:
+          name: code-coverage
+          path: target/site/jacoco/index.html
       - name: Send Notification
         uses: slackapi/slack-github-action@v1.25.0
         with:
