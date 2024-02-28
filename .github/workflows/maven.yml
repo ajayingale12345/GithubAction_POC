@@ -8,14 +8,14 @@ on:
 
 jobs:
   build:
-    runs-on:  ubuntu-latest
+    runs-on: self-hosted
    
     steps:
-      - name: Adding Script to my workflow
-        run: |
-          pwd
-          ls -l
-          ls
+      # - name: Adding Script to my workflow
+      #   run: |
+      #     pwd
+      #     ls -l
+      #     ls
    
 
       - name: Use Secret
@@ -25,9 +25,9 @@ jobs:
      
       - name: Checkout code
         uses: actions/checkout@v3
-      - name: Execute myscript.sh
-        run: |
-         bash /home/runner/work/GithubAction_POC/GithubAction_POC/scripts/myscript.sh
+      # - name: Execute myscript.sh
+      #   run: |
+      #    bash /home/runner/work/GithubAction_POC/GithubAction_POC/scripts/myscript.sh
       - name: Set up JDK 17
         uses: actions/setup-java@v3
         with:
@@ -39,20 +39,20 @@ jobs:
         run: mvn clean install -B package --file spring-boot-ems/pom.xml
       - name: runtest
         run: mvn test  -B package --file spring-boot-ems/pom.xml
-      - name: Generate code coverage report
-        run: |
+      # - name: Generate code coverage report
+      #   run: |
           
-          mvn jacoco:report   -B package --file spring-boot-ems/pom.xml
-      - name: Publish code coverage result
-        uses: actions/upload-artifact@v2
-        with:
-          name: code-coverage
-          path: spring-boot-ems/target/site/jacoco/index.html
-      - name: check jacoco
-        run: |
-         pwd
-         cd  /home/runner/work/GithubAction_POC/GithubAction_POC/spring-boot-ems/target
-          ls
+      #     mvn jacoco:report   -B package --file spring-boot-ems/pom.xml
+      # - name: Publish code coverage result
+      #   uses: actions/upload-artifact@v2
+      #   with:
+      #     name: code-coverage
+      #     path: spring-boot-ems/target/site/jacoco/index.html
+      # - name: check jacoco
+      #   run: |
+      #    pwd
+      #    cd  /home/runner/work/GithubAction_POC/GithubAction_POC/spring-boot-ems/target
+      #     ls
       - name: Send Notification
         uses: slackapi/slack-github-action@v1.25.0
         with:
