@@ -95,7 +95,19 @@
           <goals>
             <goal>report</goal>
           </goals>
-           <configuration>
+          configuration>
+            <formats>
+              <format>XML</format>
+            </formats>
+          </configuration>
+        </execution>
+	      <execution>
+                        <id>post-unit-test</id>
+                        <phase>test</phase>
+                        <goals>
+                            <goal>report</goal>
+                        </goals>
+                        <configuration>
                             <!-- Sets the path to the file which contains the execution data. -->
  
                             <dataFile>spring-boot-ems/target/jacoco.exec</dataFile>
@@ -103,14 +115,13 @@
                             <outputDirectory>spring-boot-ems/target/my-reports</outputDirectory>
                         </configuration>
                     </execution>
-                </executions>
-                <configuration>
+	      
+      </executions>
+				  <configuration>
                     <systemPropertyVariables>
                         <jacoco-agent.destfile>spring-boot-ems/target/jacoco.exec</jacoco-agent.destfile>
                     </systemPropertyVariables>
-                </configuration>
-        </execution>
-      </executions>
+                </configuration
     </plugin>
 			
 		</plugins>
