@@ -55,8 +55,8 @@ jobs:
            -Dsonar.sources=src/main
            -Dsonar.exclusions=**/*.java
            -Dsonar.java.binaries=target/ 
-           -Dsonar.jacoco.reportPaths>sonar.jacoco.reportPaths=target/jacoco.exec
-           -Dsonar.coverage.jacoco.xmlReportPaths>target/site/jacoco/jacoco.xml
+           -Dsonar.coverage.jacoco.xmlReportPaths=target/site/jacoco/jacoco.xml
+           -Dsonar.coverage.jacoco.reportPaths=target/jacoco.exec
 
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN}}
