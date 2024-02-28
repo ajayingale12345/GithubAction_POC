@@ -51,7 +51,7 @@ jobs:
       - name: check jacoco
         run: |
          pwd
-          ls -l
+         cd  /home/runner/work/GithubAction_POC/GithubAction_POC/spring-boot-ems/target
           ls
       - name: Send Notification
         uses: slackapi/slack-github-action@v1.25.0
