@@ -117,11 +117,7 @@
                     </execution>
 	      
       </executions>
-				  <configuration>
-                    <systemPropertyVariables>
-                        <jacoco-agent.destfile>spring-boot-ems/target/jacoco.exec</jacoco-agent.destfile>
-                    </systemPropertyVariables>
-                </configuration
+		
     </plugin>
 			
 		</plugins>
