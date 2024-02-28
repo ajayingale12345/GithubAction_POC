@@ -95,7 +95,7 @@
           <goals>
             <goal>report</goal>
           </goals>
-          configuration>
+          <configuration>
             <formats>
               <format>XML</format>
             </formats>
