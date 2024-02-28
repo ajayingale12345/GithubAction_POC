@@ -69,9 +69,7 @@ jobs:
            -Dsonar.projectKey=ajayingale12345_GithubAction_POC
            -Dsonar.sources=src/main
            -Dsonar.exclusions=**/*.java
-           # -Dsonar.java.binaries=target/ 
-           # -Dsonar.coverage.jacoco.xmlReportPaths=target/site/jacoco/jacoco.xml
-           # -Dsonar.coverage.jacoco.reportPaths=target/jacoco.exec
+          
 
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN}}
