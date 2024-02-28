@@ -21,9 +21,7 @@
 		<sonar.sources>src/main</sonar.sources>
 		<sonar.java.binaries>target</sonar.java.binaries>
 		<sonar.jacoco.reportPaths>sonar.jacoco.reportPaths=target\jacoco.exec</sonar.jacoco.reportPaths> 
-		<sonar.coverage.jacoco.xmlReportPaths>
-   spring-boot-ems/target/site/jacoco-aggregate/jacoco.xml
-  </sonar.coverage.jacoco.xmlReportPaths>eportPaths>
+		<sonar.coverage.jacoco.xmlReportPaths>spring-boot-ems/target/site/jacoco/jacoco.xml</sonar.coverage.jacoco.xmlReportPaths>
                 
 
 	</properties>
