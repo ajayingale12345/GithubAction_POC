@@ -48,6 +48,11 @@ jobs:
         with:
           name: code-coverage
           path: spring-boot-ems/target/site/jacoco/index.html
+      - name: check jacoco
+        run: |
+         pwd
+          ls -l
+          ls
       - name: Send Notification
         uses: slackapi/slack-github-action@v1.25.0
         with:
