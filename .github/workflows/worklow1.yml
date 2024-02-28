@@ -1,0 +1,12 @@
+name: Workflow 1
+
+on:
+  push:
+    branches: [ "master" ]
+
+jobs:
+  some_job:  
+    runs-on: ubuntu-latest
+    steps:
+      - name: stwep on wokflow 1
+        run: echo "Hello!"
