@@ -11,14 +11,14 @@ jobs:
     runs-on: ubuntu-latest
    
     steps:
-      # - name: Adding Script to my workflow
-      #   run: |
-      #     pwd
-      #     ls -l
-      #     ls
-      # - name: Execute myscript.sh
-      #   run: |
-      #     bash /home/runner/work/GithubAction_POC/GithubAction_POC/scripts/myscript.sh
+      - name: Adding Script to my workflow
+        run: |
+          pwd
+          ls -l
+          ls
+      - name: Execute myscript.sh
+        run: |
+          bash /home/runner/work/GithubAction_POC/GithubAction_POC/scripts/myscript.sh
 
       - name: Use Secret
         run: |
