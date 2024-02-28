@@ -1,5 +1,5 @@
 
-name: Workflow B
+name: Workflow 2
 
 on:
   workflow_run:
