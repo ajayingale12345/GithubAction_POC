@@ -37,7 +37,8 @@ jobs:
       
       - name: Build with Maven
         run: mvn clean install -B package --file spring-boot-ems/pom.xml
-        
+      - name: runtest
+        run: mvn test  -B package --file spring-boot-ems/pom.xml
       - name: Send Notification
         uses: slackapi/slack-github-action@v1.25.0
         with:
